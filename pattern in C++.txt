@@ -1,0 +1,956 @@
+1- Right Angel triangle pattern in C++:-
+
+#include <iostream>
+using namespace std;
+int main() 
+{
+// Outer loop for rows
+    for (int i = 1; i <= 5; i++) {
+// Inner loop for printing '*' in each row
+    for (int j = 1; j <= i; j++) {
+            cout << "*";// to print the star
+        }
+        cout << endl;// Move to the next line after each row
+    }
+    return 0;
+}
+
+2- Inverted Right-Angled Triangle:-
+
+#include <iostream>
+using namespace std;
+int main() 
+{
+int i =5;
+// Outer loop for rows (starting from 5 to 1)
+    for (int i = 5; i >= 1; i--) {
+// Inner loop for printing '*' in each row
+        for (int j = 1; j <= i; j++) {
+            cout << "*";//to print star
+        }
+        cout <<endl;// Move to the next line after each row
+    }
+    return 0;
+}
+
+3- Full Pyramid:-
+
+#include <iostream>
+using namespace std;
+int main() 
+{
+int n = 5;// Number of rows in the pyramid
+//outer loop for rows
+    for (int i = 1; i <= n; i++) {
+//to print leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " ";
+        }
+//for Printing stars
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            cout << "*";
+        }
+        cout <<endl;// Move to the next line after each row
+    }
+    return 0;
+}
+
+4- Inverted Pyramid:-
+
+#include <iostream>
+using namespace std;
+int main() 
+{
+int n = 5; // Number of rows in the pyramid
+//outer loop for rows
+    for (int i = n; i >= 1; i--) {
+//to print leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " ";
+        }
+//for printing stars
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            cout << "*";
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+    return 0;
+}
+
+5- Hollow pyramid:-
+
+#include <iostream>
+using namespace std;
+int main() 
+{
+ int n = 5; //Number of rows in the pyramid
+// outer loops for row
+    for (int i = 1; i <= n; i++) {
+//to print leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " ";
+        }
+// Print stars and spaces for hollow effect
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            if (k == 1 || k == (2 * i - 1) || i == n)
+                cout << "*"; // print star at boundries
+            else
+                cout << " "; // Print space inside hollow area
+        }
+        cout <<endl;// Move to the next line after each row
+    }
+    return 0;
+}
+
+6- Diamond
+
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int n = 5; // Number of rows for the top half
+
+    for (int i = 1; i <= n; i++) {
+        // Print leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print space
+        }
+        // Print stars
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            cout << "*"; // Print star
+        }
+        cout <<endl; // Move to the next line
+    }
+    for (int i = n - 1; i >= 1; i--) {
+        // Print leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print space
+        }
+        // Print stars
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            cout << "*"; // Print star
+        }
+        cout << endl; // Move to the next line
+    }
+
+    return 0;
+}
+
+7- Square:-
+
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int n = 5; // Size of the square
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for columns
+        for (int j = 1; j <= n; j++) {
+            cout << "*"; // Print star
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+8- Hollow Square:-
+
+#include <iostream>
+using namespace std;
+int main() {
+   
+    int n = 5; // Size of the square
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for columns
+        for (int j = 1; j <= n; j++) {
+            // Print stars on the borders, and spaces inside the square
+            if (i == 1 || i == n || j == 1 || j == n)
+                cout << "*"; // Print star
+            else
+                cout << " "; // Print space inside
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+9- Diagonal Line
+
+#include <iostream>
+using namespace std;
+int main() {
+   
+    int n = 5; // Size of the matrix
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for columns
+        for (int j = 1; j <= n; j++) {
+            // Print '*' along the diagonal
+            if (i == j)
+                cout << "*";
+            else
+                cout << " ";
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+10- Opposite Diagonal:-
+
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n = 5; // Size of the matrix
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for columns
+        for (int j = 1; j <= n; j++) {
+            // Print '*' on the opposite diagonal
+            if (i + j == n + 1)
+                cout << "*";
+            else
+                cout << " ";
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+11- X-Shape
+
+#include <iostream>
+using namespace std;
+int main() {
+  
+    int n = 5; // Size of the X shape
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for columns
+        for (int j = 1; j <= n; j++) {
+            // Print '*' at diagonal and opposite diagonal positions
+            if (i == j || i + j == n + 1)
+                cout << "*";
+            else
+                cout << " ";
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+12- Plus Sign
+
+#include <iostream>
+using namespace std;
+int main() {
+   
+    int n = 5; // Size of the plus sign
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for columns
+        for (int j = 1; j <= n; j++) {
+            // Print '*' in the center column and row
+            if (i == (n / 2) + 1 || j == (n / 2) + 1)
+                cout << "*";
+            else
+                cout << " ";
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+13- Triangle with border:-
+
+#include <iostream>
+using namespace std;
+int main() 
+{
+  
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << ""; // Print space for triangle shape
+        }
+        // Inner loop for stars and borders
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            if (k == 1 || k == (2 * i - 1) || i == n) // Print stars at borders or at the base
+                cout << "*";
+            else
+                cout << " ";
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+14- Zigzag Pattern:-
+
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for columns
+        for (int j = 1; j <= n; j++) {
+            // Print '*' in a zigzag pattern
+            if ((i + j) % 2 == 0)
+                cout << "* ";
+            else
+                cout << "   ";
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+15- Sand clock:-
+
+#include <iostream>
+using namespace std;
+int main() {
+   
+    int n = 5; // Number of rows for the upper and lower part
+    // Upper part of the sand clock
+    for (int i = n; i >= 1; i--) {
+        // Print leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print space
+        }
+        // Print stars
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            cout << "*"; // Print star
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+    // Lower part of the sand clock
+    for (int i = 2; i <= n; i++) {
+        // Print leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print space
+        }
+        // Print stars
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            cout << "*"; // Print star
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+16- Vertical bars:-
+
+#include <iostream>
+using namespace std;
+int main() {
+   
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for columns
+        for (int j = 1; j <= n; j++) {
+            cout << "*"; // Print '*' with a space for the bars
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+17- Hollow Triangle:-
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print space for triangle shape
+        }
+        // Inner loop for stars and hollow effect
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            if (k == 1 || k == (2 * i - 1) || i == n) // Print stars at borders or at the base
+                cout << "*";
+            else
+                cout << " "; // Print space for hollow area
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+18- Numeric Triangle:-
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing numbers in each row
+        for (int j = 1; j <= i; j++) {
+            cout << j; // Print number
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+19- Inverted number triangle:-
+#include <iostream>
+using namespace std;
+int main() {
+   
+    int n = 5; // Number of rows
+    // Outer loop for rows (starting from n)
+    for (int i = n; i >= 1; i--) {
+        // Inner loop for printing numbers in each row
+        for (int j = 1; j <= i; j++) {
+            cout << j; // Print number
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+20- Number pyramid:-
+
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print space for pyramid shape
+        }
+        // Inner loop for printing numbers in the pyramid shape
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            if (j <= i)
+                cout << j; // Print increasing numbers in the first half
+            else
+                cout << (2 * i - j); // Print decreasing numbers in the second half
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+21- Number Inverted Pyramid:-
+#include <iostream>
+using namespace std;
+int main() {
+  
+    int n = 5; // Number of rows
+    // Outer loop for rows (starting from n)
+    for (int i = n; i >= 1; i--) {
+        // Inner loop for printing leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print space for pyramid shape
+        }
+        // Inner loop for printing numbers in the pyramid shape
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            if (j <= i)
+                cout << j; // Print increasing numbers in the first half
+            else
+                cout << (2 * i - j); // Print decreasing numbers in the second half
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+22- Repeated Number:-
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing repeated numbers
+        for (int j = 1; j <= i; j++) {
+            cout << i; // Print the row number
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+23- Numbers in columns:-
+
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n = 5; // Number of columns and rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing numbers in columns
+        for (int j = 1; j <= n; j++) {
+            cout << j << ""; // Print numbers with a space between them
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+24- Floyd's Triangle:-
+
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int n = 5; // Number of rows
+    int num = 1; // Start number
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing numbers in each row
+        for (int j = 1; j <= i; j++) {
+            cout << num << " "; // Print number
+            num++; // Increment the number for the next position
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+25- Pascal's Triangle:-
+
+#include <iostream>
+using namespace std;
+int main() {
+  
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 0; i < n; i++) {
+        // Inner loop for printing spaces
+        for (int j = 0; j < n - i; j++) {
+            cout << " "; // Print space for alignment
+        }
+        int val = 1; // Initialize first value of the row
+        // Inner loop for printing numbers in the current row
+        for (int j = 0; j <= i; j++) {
+            cout << val << " "; // Print value
+            val = val * (i - j) / (j + 1); // Calculate next value in the row
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+26- Alphabet Triangle:-
+
+#include <iostream>
+using namespace std;
+int main() {
+  
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing characters
+        for (int j = 1; j <= i; j++) {
+            cout << (char)('A' + j - 1); // Print letter (A, AB, ABC, etc.)
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+27- Alphabet Pyramid:-
+
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print space for alignment
+        }
+        // Inner loop for printing characters in the pyramid shape
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            cout << (char)('A' + j - 1); // Print letter
+        }
+        cout <<endl; //Move to the next line after each row
+    }
+
+    return 0;
+}
+
+28- Alternating Triangle:-
+
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing alternating 1s and 0s
+        for (int j = 1; j <= i; j++) {
+            if ((i + j) % 2 == 0)
+                cout << "1"; // Print 1 for alternating pattern
+            else
+                cout << "0"; // Print 0 for alternating pattern
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+29- Binary pyramid:-
+
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print space for pyramid shape
+        }
+        // Inner loop for printing binary pattern
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            if (j % 2 == 1) // Print 1 for odd positions
+                cout << "1";
+            else // Print 0 for even positions
+                cout << "0";
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+
+30- Number X shape:-
+#include <iostream>
+using namespace std;
+int main() {
+   
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for columns
+        for (int j = 1; j <= n; j++) {
+            // Print numbers at the diagonals
+            if (i == j || i + j == n + 1)
+                cout << i << " "; // Print row number at the diagonals
+            else
+                cout << "  "; // Print spaces in non-diagonal positions
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+31- Staggered Numbers:-
+
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int n = 5; // Number of rows
+    int num = 1; // Starting number
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing numbers in staggered pattern
+        for (int j = 1; j <= i; j++) {
+            cout << num << " "; // Print number
+            num++; // Increment the number for the next position
+            if (num > 10) {
+                break; // Stop printing numbers when it exceeds 10
+            }
+        }
+        cout <<endl; // Move to the next line after each row
+
+        if (num > 10) {
+            break; // Exit the outer loop if num exceeds 10
+        }
+    }
+
+    return 0;
+}
+
+32- Half Diamond number:-
+
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int n = 5; // Number of rows for the upper half
+    // Upper half of the half-diamond
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing numbers
+        for (int j = 1; j <= i; j++) {
+            cout << j; // Print number in increasing order
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+    // Lower half of the half-diamond (reverse)
+    for (int i = n - 1; i >= 1; i--) {
+        // Inner loop for printing numbers
+        for (int j = 1; j <= i; j++) {
+            cout << j; // Print number in increasing order
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+33- Triangle with stars:-
+ 
+#include <iostream>
+using namespace std;
+int main() {
+   
+     int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing numbers and stars
+        for (int j = 1; j <= i; j++) {
+            if (j % 2 == 1) {
+                cout << j; // Print number for odd positions
+            } else {
+                cout << "*"; // Print star for even positions
+            }
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+34- Number Borders:-
+
+#include <iostream>
+using namespace std;
+int main() {
+   
+    int n = 5; // Size of the square
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for columns
+        for (int j = 1; j <= n; j++) {
+            if (i == 1 || i == n || j == 1 || j == n) {
+                cout << "1"; // Print 1 on borders
+            } else {
+                cout << "0"; // Print 0 inside the borders
+            }
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+35- Nested Loops:- 
+
+#include <iostream>
+using namespace std;
+int main() {
+  
+
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing numbers in each row
+        for (int j = 1; j <= i; j++) {
+            cout << j; // Print numbers incrementally
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+36- Pyramid of Digits:-
+#include <iostream>
+using namespace std;
+int main() {
+  
+    int n = 5; // Number of rows
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing leading spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print space for pyramid shape
+        }
+        // Inner loop for printing numbers in pyramid shape
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            cout << i; // Print the row number repeatedly in pyramid shape
+        }
+        cout <<endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+37- Inverted triangle Numbers:-
+
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int n = 5; // Number of rows
+    // Outer loop for rows (starting from 1 to n)
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing numbers in reverse order
+        for (int j = i; j >= 1; j--) {
+            cout << j; // Print numbers in decreasing order
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+38- Spiral matrix:-
+
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n = 4; // Size of the matrix (4x4)
+    int matrix[4][4] = {
+        {7, 8, 9, 10},
+        {6, 1, 2, 11},
+        {5, 4, 3, 12},
+        {16, 15, 14, 13}
+    };
+
+    // Loop to print the matrix
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << matrix[i][j] << " "; // Print each element in the matrix
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+39- Diamond spiral:-
+
+#include <iostream>
+using namespace std;
+int main() {
+   
+
+    int n = 5; // Number of rows for the upper half
+    // Upper part of the diamond spiral
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print spaces to center the spiral
+        }
+        // Inner loop for printing numbers
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            cout << i; // Print row number in a spiral pattern
+        }
+        cout << endl; // Move to the next line after each row
+    }
+    // Lower part of the diamond spiral (reverse)
+    for (int i = n - 1; i >= 1; i--) {
+        // Inner loop for printing spaces
+        for (int j = 1; j <= n - i; j++) {
+            cout << " "; // Print spaces for alignment
+        }
+        // Inner loop for printing numbers
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            cout << i; // Print row number in a spiral pattern
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+40- . Checkerboard Numbers with Conditions:-
+
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n = 5; // Size of the checkerboard
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for columns
+        for (int j = 1; j <= n; j++) {
+            // Print alternating 1s and 0s in the checkerboard pattern
+            if ((i + j) % 2 == 0)
+                cout << "1 ";
+            else
+                cout << "0 ";
+        }
+        cout <<endl ; // Move to the next line after each row
+    }
+
+    return 0;
+}
+
+41- Snake pattern:-
+
+#include <iostream>
+using namespace std;
+int main() {
+ 
+
+    int n = 5; // Number of rows
+    int num = 1; // Start number
+    // Outer loop for rows
+    for (int i = 1; i <= n; i++) {
+        // Inner loop for printing numbers in a snake-like zigzag pattern
+        if (i % 2 != 0) {
+            // For odd rows, print numbers in increasing order
+            for (int j = 1; j <= n; j++) {
+                cout << num++ << " ";
+            }
+        } else {
+            // For even rows, print numbers in decreasing order
+            int temp = num + n - 1;
+            for (int j = 1; j <= n; j++) {
+                cout << temp-- << " ";
+            }
+            num += n; // Adjust the number for the next row
+        }
+        cout << endl; // Move to the next line after each row
+    }
+
+    return 0;
+}
